@@ -13,3 +13,22 @@ body
   min-height: 100vh;
   background: #262626;
 }
+
+.container
+{
+  position: relative;
+  display: flex;
+}
+
+.container .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  margin: 0 20px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+  background-size: 40px 40px;
+  filter: grayscale(1);
+  animation: animateBg 0.5s linear infinite;
+}
