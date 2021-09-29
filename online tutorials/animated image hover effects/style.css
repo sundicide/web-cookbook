@@ -18,6 +18,7 @@ body
 {
   position: relative;
   display: flex;
+  -webkit-box-reflect: below 1px linear-gradient(transarent, transarent, transarent, #0004);
 }
 
 .container .box
@@ -31,4 +32,23 @@ body
   background-size: 40px 40px;
   filter: grayscale(1);
   animation: animateBg 0.5s linear infinite;
+  animation-play-state: paused;
+}
+
+.container .box:nth-child(2)
+{
+  background: linear-gradient(135deg, #ff61ae 25%, #444 25%, #444 50%, #ff61ae 50%, #ff61ae 75%, #444 75%, #444 100%);
+  background-size: 40px 40px;
+}
+
+@keyframes animateBg
+{
+  0%
+  {
+    background-position: 0;
+  }
+  100%
+  {
+    background-position: 40px;
+  }
 }
