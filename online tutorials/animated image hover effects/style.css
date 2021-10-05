@@ -18,7 +18,7 @@ body
 {
   position: relative;
   display: flex;
-  -webkit-box-reflect: below 1px linear-gradient(transarent, transarent, transarent, #0004);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
 }
 
 .container .box
@@ -34,6 +34,8 @@ body
   animation: animateBg 0.5s linear infinite;
   animation-play-state: paused;
   transition: filter 1s;
+  display: flex;
+  justify-content: center;
 }
 
 .container .box:nth-child(2)
@@ -58,4 +60,16 @@ body
   {
     background-position: 40px;
   }
+}
+
+.container .box img
+{
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  transition: height 0.5s;
+}
+.container .box:hover img
+{
+  height: 480px;
 }
