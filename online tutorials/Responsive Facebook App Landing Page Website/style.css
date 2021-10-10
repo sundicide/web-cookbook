@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+:root {
+  --blue-color: #3b5998;
+  --blue-hover-color: #2d88ff;
+  --text-color-default: #333;
+  --white: #fff;
+}
+
 *
 {
   margin: 0;
@@ -10,5 +17,168 @@
 .main
 {
   position: relative;
-  background: linear-gradient(#fff, #fff 60%, #3b5998 60%, #3b5998 100%)
+  background: linear-gradient(120deg, var(--white), var(--white) 62%, var(--blue-color) 62%, var(--blue-color) 100%);
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .logo img {
+  max-width: 50px;
+  margin-right: 20px;
+}
+header ul
+{
+  display: flex;
+}
+header ul li
+{
+  list-style: none;
+  margin: 0 10px;
+}
+header ul li a
+{
+  text-decoration: none;
+  color: var(--text-color-default);
+  font-weight: 500;
+}
+header ul li a:hover,
+header ul li a.active
+{
+  color: var(--blue-hover-color);
+}
+.app
+{
+  position: absolute;
+  right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  color: var(--blue-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.app:hover
+{
+  background: var(--blue-hover-color);
+  color: var(--white);
+}
+.app ion-icon
+{
+  margin-right: 10px;
+  font-size: 1.4em;
+}
+.contentBx
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentBx .text
+{
+  max-width: 800px;
+}
+.contentBx .text h2
+{
+  font-size: 6em;
+  color: var(--blue-color);
+}
+.contentBx .text p
+{
+  font-size: 1.1em;
+  color: var(--text-color-default);
+  line-height: 1.8em;
+}
+
+.contentBx .text h4
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--text-color-default);
+}
+.btn
+{
+  background: var(--blue-color);
+  color: var(--white);
+  display: inline-flex;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  margin: 5px 20px 5px 0;
+  border-radius: 5px;
+}
+.btn:hover
+{
+  background: var(--blue-hover-color);
+}
+.btn ion-icon
+{
+  margin-right: 10px;
+  font-size: 1.4em;
+}
+.imgBx img
+{
+  margin-left: 50px;
+  margin-right: 100px;
+  max-width: 300px;
+  display: none;
+}
+.imgBx img.active
+{
+  display: block;
+}
+.dots
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.dots .dot
+{
+  position: relative;
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  margin: 5px;
+  cursor: pointer;
+}
+.dots .dot.active
+{
+  background: var(--white);
+}
+.sci
+{
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+}
+.sci li
+{
+  list-style: none;
+  margin-right: 20px;
+}
+.sci li a
+{
+  font-size: 1.8em;
+  color: var(--blue-color);
 }
